@@ -109,7 +109,7 @@ export function Depoimentos() {
         ))}
       </div>
 
-      <p className="text-[0.7rem] tracking-[0.16em] text-muted-foreground uppercase">
+      <p className="mt-2 text-[0.7rem] tracking-[0.16em] text-muted-foreground uppercase">
         Avaliações verificadas no Google · arraste para ver mais
       </p>
     </Section>
