@@ -37,9 +37,8 @@ function Index() {
         <Sobre />
         <Metodo />
         <Servicos />
-        <Ambiente />
+        <Espaco />
         <Depoimentos />
-        <Localizacao />
         <Contato />
       </main>
       <Footer />
