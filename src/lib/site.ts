@@ -1,5 +1,6 @@
 export const WHATSAPP = "https://wa.me/553598730738";
 export const MAPS_URL = "https://share.google/xwunPBRTYGSowCHPW";
+export const GOOGLE_REVIEWS = "https://share.google/xwunPBRTYGSowCHPW";
 export const PHONE = "(35) 99873-0738";
 export const ADDRESS = "Av. Dr. João Carlos, 251B - Centro, Guaxupé - MG, 37800-000";
 export const INSTAGRAM = "https://instagram.com/esteticabiovisage";

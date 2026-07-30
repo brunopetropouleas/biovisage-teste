@@ -4,9 +4,8 @@ import { Hero } from "@/components/site/Hero";
 import { Sobre } from "@/components/site/Sobre";
 import { Metodo } from "@/components/site/Metodo";
 import { Servicos } from "@/components/site/Servicos";
-import { Ambiente } from "@/components/site/Ambiente";
+import { Espaco } from "@/components/site/Espaco";
 import { Depoimentos } from "@/components/site/Depoimentos";
-import { Localizacao } from "@/components/site/Localizacao";
 import { Contato } from "@/components/site/Contato";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFab } from "@/components/site/WhatsAppFab";
@@ -38,9 +37,8 @@ function Index() {
         <Sobre />
         <Metodo />
         <Servicos />
-        <Ambiente />
+        <Espaco />
         <Depoimentos />
-        <Localizacao />
         <Contato />
       </main>
       <Footer />
