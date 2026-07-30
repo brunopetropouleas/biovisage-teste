@@ -1,4 +1,6 @@
-import { Eyebrow, Section } from "./ui";
+import { useRef } from "react";
+import { GOOGLE_REVIEWS } from "@/lib/site";
+import { Eyebrow, GoogleIcon, Reveal, Section } from "./ui";
 
 const REVIEWS = [
   {
@@ -32,33 +34,84 @@ function Stars() {
 }
 
 export function Depoimentos() {
-  return (
-    <div className="marble border-y border-border/60">
-      <Section id="depoimentos">
-        <Eyebrow>Depoimentos</Eyebrow>
-        <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">
-          O que dizem sobre a Biovisage.
-        </h2>
+  const trackRef = useRef<HTMLDivElement>(null);
 
-        <div className="mt-12 grid gap-4 md:grid-cols-2">
-          {REVIEWS.map((r) => (
-            <figure key={r.name} className="surface flex flex-col rounded-sm p-6 sm:p-8">
+  const scrollBy = (dir: number) => {
+    const el = trackRef.current;
+    if (!el) return;
+    el.scrollBy({ left: dir * (el.clientWidth * 0.85), behavior: "smooth" });
+  };
+
+  return (
+    <Section id="depoimentos" tone="light" veilTo="dark" marble>
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] items-end gap-4">
+        <Reveal className="min-w-0">
+          <Eyebrow>Depoimentos</Eyebrow>
+          <h2 className="mt-5 max-w-2xl font-serif text-4xl leading-tight sm:text-5xl">
+            O que dizem sobre a Biovisage.
+          </h2>
+        </Reveal>
+        <div className="flex shrink-0 gap-2">
+          <button
+            type="button"
+            onClick={() => scrollBy(-1)}
+            aria-label="Depoimento anterior"
+            className="grid h-11 w-11 place-items-center rounded-full border border-primary/45 text-primary transition-colors hover:bg-primary/10"
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M15 5l-7 7 7 7" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollBy(1)}
+            aria-label="Próximo depoimento"
+            className="grid h-11 w-11 place-items-center rounded-full border border-primary/45 text-primary transition-colors hover:bg-primary/10"
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <path d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        ref={trackRef}
+        className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      >
+        {REVIEWS.map((r, i) => (
+          <Reveal
+            key={r.name}
+            delay={i * 80}
+            className="w-[86%] shrink-0 snap-start sm:w-[58%] lg:w-[42%]"
+          >
+            <a
+              href={GOOGLE_REVIEWS}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="surface relative flex h-full flex-col rounded-sm p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_18px_40px_-24px_oklch(0.6_0.107_80/70%)] sm:p-8"
+            >
+              <GoogleIcon className="absolute top-5 right-5 h-4 w-4 opacity-70" />
               <Stars />
               <blockquote className="mt-5 flex-1 font-serif text-xl leading-relaxed text-foreground/90 sm:text-2xl">
                 “{r.text}”
               </blockquote>
-              <figcaption className="mt-6 flex items-center gap-3">
+              <div className="mt-6 flex items-center gap-3">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-primary/40 text-xs text-primary">
                   {r.name.charAt(0)}
                 </span>
                 <span className="text-xs tracking-[0.16em] text-muted-foreground uppercase">
                   {r.name}
                 </span>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-      </Section>
-    </div>
+              </div>
+            </a>
+          </Reveal>
+        ))}
+      </div>
+
+      <p className="text-[0.7rem] tracking-[0.16em] text-muted-foreground uppercase">
+        Avaliações verificadas no Google · arraste para ver mais
+      </p>
+    </Section>
   );
 }
