@@ -85,6 +85,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "Biovisage" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "BIOVISAGE — Estética e Beleza Facial" },
+      { name: "twitter:title", content: "BIOVISAGE — Estética e Beleza Facial" },
+      { property: "og:description", content: "Clínica de estética facial em Guaxupé, MG, com a Dra. Suellen Paiva." },
+      { name: "twitter:description", content: "Clínica de estética facial em Guaxupé, MG, com a Dra. Suellen Paiva." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9d274dd7-0247-45ab-99a2-51f8f3c26f8a" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9d274dd7-0247-45ab-99a2-51f8f3c26f8a" },
     ],
     links: [
       {
