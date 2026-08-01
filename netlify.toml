@@ -1,3 +1,9 @@
 [build]
   command = "bun run build"
-  publish = ".output/public"
+  # Nitro's `netlify` preset emits the static client into `dist/` and the SSR
+  # handler into `.netlify/functions-internal/` (auto-detected by Netlify).
+  publish = "dist"
+
+[build.environment]
+  NITRO_PRESET = "netlify"
+  NODE_VERSION = "22"
