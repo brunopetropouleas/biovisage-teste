@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import fachada from "@/assets/unnamed_4.asset.json";
-import banheira from "@/assets/unnamed_1.asset.json";
+import fachada from "@/assets/unnamed_4.webp";
+import banheira from "@/assets/unnamed_1.webp";
 import espera from "@/assets/sala-espera.jpg";
 import tratamento from "@/assets/sala-tratamento.jpg";
 import { ADDRESS, MAPS_URL } from "@/lib/site";
@@ -8,7 +8,7 @@ import { Eyebrow, Reveal, Section } from "./ui";
 
 const PHOTOS = [
   {
-    src: fachada.url,
+    src: fachada,
     alt: "Fachada da Biovisage com porta roxa e logo em relevo",
     h: "h-[260px] sm:h-[420px]",
   },
@@ -23,7 +23,7 @@ const PHOTOS = [
     h: "h-[220px] sm:h-[340px]",
   },
   {
-    src: banheira.url,
+    src: banheira,
     alt: "Banheira de hidromassagem com ambientação de cristais e aromas",
     h: "h-[260px] sm:h-[380px]",
   },

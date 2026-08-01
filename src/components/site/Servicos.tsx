@@ -7,7 +7,7 @@ import {
   ShieldCheck,
   Waves,
 } from "lucide-react";
-import fonte from "@/assets/Screenshot_6.asset.json";
+import fonte from "@/assets/Screenshot_6.jpg";
 import { SERVICES, WHATSAPP } from "@/lib/site";
 import { Eyebrow, Reveal, Section } from "./ui";
 
@@ -54,7 +54,7 @@ export function Servicos() {
         <div className="relative mt-14 md:mt-20">
           <div className="veil-shape-alt overflow-hidden border border-primary/30 md:w-[62%]">
             <img
-              src={fonte.url}
+              src={fonte}
               alt="Protocolo Fonte da Juventude com a Dra. Suellen Paiva"
               loading="lazy"
               width={744}

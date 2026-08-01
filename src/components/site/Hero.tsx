@@ -1,4 +1,4 @@
-import fachada from "@/assets/unnamed_4.asset.json";
+import fachada from "@/assets/unnamed_4.webp";
 import { WHATSAPP } from "@/lib/site";
 import { Reveal, VeilDivider, WhatsAppIcon } from "./ui";
 
@@ -10,7 +10,7 @@ export function Hero() {
         className="relative isolate flex min-h-[100svh] items-center overflow-hidden pt-24 pb-24"
       >
         <img
-          src={fachada.url}
+          src={fachada}
           alt="Fachada da clínica Biovisage em Guaxupé, com porta roxa e logo em relevo"
           className="absolute inset-0 -z-30 h-full w-full object-cover opacity-20"
           width={680}
