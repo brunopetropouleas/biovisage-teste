@@ -1,4 +1,4 @@
-import retrato from "@/assets/Screenshot_2.asset.json";
+import retrato from "@/assets/Screenshot_2.jpg";
 import { Eyebrow, Reveal, Section } from "./ui";
 
 export function Sobre() {
@@ -9,7 +9,7 @@ export function Sobre() {
           <div className="veil-shape absolute -inset-4 -z-10 border border-primary/40 sm:-inset-6" />
           <div className="veil-shape overflow-hidden border border-primary/30 shadow-[0_30px_70px_-40px_oklch(0.3_0.08_315/70%)] sm:-ml-6 sm:-mr-2">
             <img
-              src={retrato.url}
+              src={retrato}
               alt="Retrato da Dra. Suellen Paiva, especialista em estética facial"
               loading="lazy"
               width={752}
