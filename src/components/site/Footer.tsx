@@ -81,6 +81,18 @@ export function Footer() {
       <div className="mx-auto mt-12 max-w-6xl border-t border-border/40 pt-6 text-center text-[0.7rem] tracking-[0.14em] text-muted-foreground uppercase">
         © {new Date().getFullYear()} Biovisage · Guaxupé, MG
       </div>
+
+      <div className="mx-auto mt-3 max-w-6xl text-center text-[0.6rem] tracking-[0.1em] text-muted-foreground opacity-60">
+        Site produzido por{" "}
+        <a
+          href="https://instagram.com/opetropouleas"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline transition-opacity duration-200 hover:opacity-100 hover:underline underline-offset-2"
+        >
+          Capital Digital Solutions
+        </a>
+      </div>
     </footer>
   );
 }
